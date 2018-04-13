@@ -25,4 +25,42 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function update_name(Request $request)
+    {
+      $name=Input::get('name');
+      $s=Auth::user()->name;
+      DB:table('users')
+        ->where(['email',$s]);
+        ->update(['name'=>$name]);
+        return redirect();
+    }
+    public function update_email(Request $request)
+    {
+      $email=Input::get('email');
+      $s=Auth::user()->name;
+      DB:table('users')
+        ->where(['email',$s]);
+        ->update(['email'=>$email]);
+        return redirect();
+    }
+    public function update_mobile(Request $request)
+    {
+      $mobile=Input::get('mobile');
+      $s=Auth::user()->name;
+      DB:table('users')
+        ->where(['email',$s]);
+        ->update(['mobile'=>$mobile]);
+      return redirect();
+    }
+
+    public function update_institute(Request $request)
+    {
+      $institute=Input::get("institute");
+      $s=Auth::user()->name;
+      DB:table('users')
+        ->where(['email',$s]);
+        ->update(['institute'=>$institute]);
+      return redirect();
+    }
+
 }
