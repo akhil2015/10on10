@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Teacher;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -39,7 +39,7 @@ class TeacherRegisterController extends Controller
     {
         $this->middleware('guest');
     }
-    
+
     public function showRegistrationForm()
     {
         return view('auth.teacher-register');

@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('teacher/register', 'Auth\TeacherRegisterController@showRegisterationForm')->name('teacher.register');
+Route::get('teacher/register', 'Auth\TeacherRegisterController@showRegistrationForm')->name('teacher.register');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('user.dashboard');
