@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('teacher/register', 'Auth\TeacherRegisterController@showRegisterationForm')->name('teacher.register');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('user.dashboard');
+Route::prefix('teacher')->group(function(){
+	Route::get('/login','Auth\TeacherLoginController@showLoginForm')->name('teacher.login');
+	Route::post('/login','Auth\TeacherLoginController@login')->name('teacher.login.submit');
+	Route::get('/', 'TeacherController@index')->name('teacher.dashboard');
+});
