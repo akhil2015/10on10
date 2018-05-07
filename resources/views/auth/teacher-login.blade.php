@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Teacher Login') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('teacher.login.submit') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -59,6 +59,9 @@
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                             </div>
+                        </div>
+                        <div class="form-group row logfb">
+                            <img src="{{asset('./images/fb.png')}}" alt="">
                         </div>
                     </form>
                 </div>

@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Mobile No.') }}</label>
+                            <label for="mobile" class="col-md-4 col-form-label text-md-right">{{ __('Mobile No.') }}</label>
 
                             <div class="col-md-6">
                                 <input id="mobile" type="text" class="form-control{{ $errors->has('mobile') ? ' is-invalid' : '' }}" name="mobile" value="{{ old('mobile') }}" required autofocus>
@@ -74,7 +74,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Institute') }}</label>
+                            <label for="institute" class="col-md-4 col-form-label text-md-right">{{ __('Institute') }}</label>
 
                             <div class="col-md-6">
                                 <input id="institute" type="text" class="form-control{{ $errors->has('institute') ? ' is-invalid' : '' }}" name="institute" value="{{ old('institute') }}" required autofocus>
